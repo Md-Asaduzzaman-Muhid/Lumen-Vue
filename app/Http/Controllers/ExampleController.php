@@ -18,11 +18,14 @@ class ExampleController extends Controller
     
 
     public function homePost(){
-         $myArr = array("John", "Mary", "Peter", "Sally");
-        $myJSON = json_encode($myArr);
-        echo $myJSON;
+        echo "Post request goes here";
     }
     public function homeGet(){
-        echo "get request at home";
+        echo "Get request goes here";
+    }
+    public function showAllBlogs(){
+        $myArr = array("Muhid1", "Muhid2", "Muhid3", "Muhid4");
+        $myJSON = json_encode($myArr);
+        echo $myJSON;
     }
 }

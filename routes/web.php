@@ -13,3 +13,9 @@
 
 $router->get('/', 'ExampleController@homeGet');
 $router->post('/','ExampleController@homePost');
+
+$router->group(['prefix'=>'api'] ,function($router) {
+    $router->get('/blogs','ExampleController@showAllBlogs');
+}
+
+);
