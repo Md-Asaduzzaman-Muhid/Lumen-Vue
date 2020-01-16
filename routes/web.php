@@ -15,7 +15,11 @@ $router->get('/', 'ExampleController@homeGet');
 $router->post('/','ExampleController@homePost');
 
 $router->group(['prefix'=>'api'] ,function($router) {
+
     $router->get('/blogs','ExampleController@showAllBlogs');
+    $router->get('/users','UserController@index');
+    $router->post('/user','UserController@store');
+
 }
 
 );
