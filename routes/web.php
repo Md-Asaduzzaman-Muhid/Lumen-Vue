@@ -16,9 +16,12 @@ $router->post('/','ExampleController@homePost');
 
 $router->group(['prefix'=>'api'] ,function($router) {
 
-    $router->get('/blogs','ExampleController@showAllBlogs');
     $router->get('/users','UserController@index');
-    $router->post('/user','UserController@store');
+    $router->post('/users','UserController@store');
+    $router->put('/users/{id}','UserController@edit');
+    $router->delete('/users/{id}','UserController@delete');
+
+    $router->get('/attendance','AttendanceController@index');
 
 }
 
