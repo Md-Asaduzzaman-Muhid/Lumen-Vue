@@ -24,6 +24,7 @@ class ExampleController extends Controller
         echo "Get request goes here";
     }
     public function showAllBlogs(){
+        
         $myArr = array("Muhid1", "Muhid2", "Muhid3", "Muhid4");
         $myJSON = json_encode($myArr);
         echo $myJSON;
