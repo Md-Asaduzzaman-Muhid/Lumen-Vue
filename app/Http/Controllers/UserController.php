@@ -29,7 +29,7 @@ class UserController extends Controller
             'image_url' => $request->image_url,
             
         ]);
-        return response()->json(['message' => 'success', 'user' => $user], 200);
+        return response()->json(['message' => 'success'], 200);
     }
 
     public function edit(Request $request , $id)
