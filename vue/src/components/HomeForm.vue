@@ -55,27 +55,28 @@ export default {
     postValue(){
       let self= this;
       //console.log('rrr');
-      axios.post('http://localhost:8000/api/users',{
+      axios.post('http://localhost:8001/api/users',{
         name: self.name,
         phone: self.phone,
         email: self.email,
         image_url: self.image_url,
-        
       }
       
 
-    ) .then(function (response) {
-        console.log(response);
+    )
+    //  .then(function (response) {
+    //     console.log(response);
       
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    },
-    resetForm: function(response) {
-        response.target.reset()
-    }
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+    // },
+    // resetForm: function(response) {
+    //     response.target.reset()
+    // }
   }
+}
 }
 
 

@@ -19,16 +19,16 @@ export default {
   }, 
   mounted:function() {
     //let self = this;
-    axios.get('http://localhost:8000/api/users')
+    axios.get('http://localhost:8001/api/users')
       .then(response => (this.result = response.data))
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-        console.log('Finally Done');
-      })
+      // .catch(function (error) {
+      //   // handle error
+      //   console.log(error);
+      // })
+      // .finally(function () {
+      //   // always executed
+      //   console.log('Finally Done');
+      // })
   }
 }
 
