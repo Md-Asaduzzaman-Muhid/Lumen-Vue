@@ -1,6 +1,6 @@
 version: "3.1"
 services:
-    www:
+    lumen:
         build: .
         ports: 
             - "8001:80"
@@ -36,5 +36,15 @@ services:
             MYSQL_USER: user
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test 
+    vue:
+        build: ./vue
+        ports: 
+            - "8007:80"
+        volumes:
+            - ./vue:/var/www/html/
+        links:
+            - lumen
+        networks:
+            - default
 volumes:
     persistent:
